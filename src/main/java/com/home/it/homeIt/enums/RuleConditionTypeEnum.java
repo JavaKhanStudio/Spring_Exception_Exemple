@@ -1,0 +1,10 @@
+package com.home.it.homeIt.enums;
+
+public enum RuleConditionTypeEnum {
+    MOTION_DETECTED,
+    TEMPERATURE_ABOVE_THRESHOLD,
+    TEMPERATURE_BELOW_THRESHOLD,
+    TIME_OF_DAY,
+    DEVICE_STATUS_CHANGE,
+    SECURITY_BREACH_DETECTED
+}

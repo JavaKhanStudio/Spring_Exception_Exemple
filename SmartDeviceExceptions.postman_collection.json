@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "29587241-7ee5-4f63-baa4-64e45681b695",
+		"name": "SmartDeviceExceptions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7216865"
+	},
+	"item": [
+		{
+			"name": "Classic Way",
+			"item": [
+				{
+					"name": "Adding Anything",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 3,\r\n    \"name\" : \"element1\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"LIGHT\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/classic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"classic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cant add this",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 1,\r\n    \"name\" : \"element1\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"SECURITY_CAMERA\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/classic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"classic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Can Properly Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 1,\r\n    \"name\" : \"element1\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"LIGHT\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/classic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"classic"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Override Way",
+			"item": [
+				{
+					"name": "Try to add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 1,\r\n    \"name\" : \"element1\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"SECURITY_CAMERA\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/class",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"class"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Global Catch",
+			"item": [
+				{
+					"name": "GlobalCatch Classic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 1,\r\n    \"name\" : \"TOP_SECRET\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"LIGHT\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/classic",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"classic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GlobalCatch Class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ownerID\" : 1,\r\n    \"name\" : \"TOP_SECRET\",\r\n    \"location\" : \"Somewhere\",\r\n    \"deviceTypeEnum\" : \"LIGHT\",\r\n    \"status\" : \"OFF\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/device/class",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"device",
+								"class"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
